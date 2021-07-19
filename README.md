@@ -94,7 +94,11 @@ _View of success message after updating employee role._
 ![Updated employee role success message](https://github.com/merewall/Employee-Tracker/blob/main/assets/update-emp-success.PNG)
 ![Updated employee role in table](https://github.com/merewall/Employee-Tracker/blob/main/assets/updatd-emp.PNG)
 
-_Demo of Employee Tracker application use._  
+_View of success message after removing employee._
+![Removed employee success message](https://github.com/merewall/Employee-Tracker/blob/main/assets/rem-emp-success.PNG)
+![Table of employees no longer showing removed employee](https://github.com/merewall/Employee-Tracker/blob/main/assets/removed-emp.PNG)
+
+_Gif of Employee Tracker application in use._  
 ![Employee Tracker demo gif](https://github.com/merewall/Employee-Tracker/blob/main/assets/employee-tracker-demo.gif)
 
 ## LICENSE
@@ -118,7 +122,7 @@ No current tests for this application.
 ## LINKS
 
 * The [repository](https://github.com/merewall/Employee-Tracker) for this application.
-* A [demo video]() on how to use the application.
+* A [demo video](https://drive.google.com/file/d/1eX9-H3P0L2LQ3OutOLXCkH1uZTL5tang/view) on how to use the application.
 
 ## QUESTIONS
 

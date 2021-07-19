@@ -2,6 +2,7 @@
 const mysql = require('mysql');
 const inquirer = require('inquirer');
 const cTable = require('console.table');
+const colors = require('colors');
 
 // Create connection
 const connection = mysql.createConnection({
@@ -52,8 +53,9 @@ const allEmp = () => {
         (err,employees) => {
         if (err) throw err;
         // Display all employees as table in console
-        console.log("\nAll company employees are as follows:\n");
+        console.log("\nAll company employees are as follows:\n".brightGreen.italic);
         console.table(employees);
+        console.log(`---------------------------------------------------------------------\n`.brightGreen.bold);
         init();
     });
 };
@@ -112,15 +114,16 @@ const empByDept = () => {
             (err,res) => {
             if (err) throw err;
             // Display all employees in the department as table in console
-            console.log(`\nEmployees in the ${answer.chosenDept} department are as follows:\n`);
+            console.log(`\nEmployees in the ${answer.chosenDept} department are as follows:\n`.brightGreen.italic);
             console.table(res);
+            console.log(`---------------------------------------------------------------------\n`.brightGreen.bold);
             init();
             });
         });
     });  
 };
 
-// Function to display employees by manager
+// Function to view employees by manager
 const empByMgr = () => {
 
     // Select all employees to give the user a list from which to choose a manager 
@@ -180,8 +183,9 @@ const empByMgr = () => {
                 (err,res) => {
                 if (err) throw err;
                 // Display all employees under that manager as table in console
-                console.log(`\nEmployees managed by ${answer.chosenMgr} are as follows:\n`);
+                console.log(`\nEmployees managed by ${answer.chosenMgr} are as follows:\n`.brightGreen.italic);
                 console.table(res);
+                console.log(`---------------------------------------------------------------------\n`.brightGreen.bold);
                 init();
                 }
             );
@@ -261,7 +265,8 @@ const addEmp = () => {
                         (err, results) => {
                         if(err) throw err;
                         // Display message in console of added employee
-                        console.log(`\nYou added ${answer.first_name} ${answer.last_name} as an employee!\n`);
+                        console.log(`\nYou added ${answer.first_name} ${answer.last_name} as an employee!\n`.brightGreen.italic);
+                        console.log(`---------------------------------------------------------------------\n`.brightGreen.bold);
                         init();
                     });
                 });
@@ -312,7 +317,8 @@ const remEmp = () => {
                 (err,res) => {
                 if (err) throw err;
                 // Display message in console of removed employee
-                console.log(`\nSuccessfully removed ${answer.removedEmp} as an employee!\n`);
+                console.log(`\nSuccessfully removed ${answer.removedEmp} as an employee!\n`.brightGreen.italic);
+                console.log(`---------------------------------------------------------------------\n`.brightGreen.bold);
                 init();
             });
         });
@@ -381,7 +387,8 @@ const updateRole = () => {
                         (err,res) => {
                         if (err) throw err;
                         // Display message in console of updated employee's role
-                        console.log(`\n${chosenEmployee.first_name} ${chosenEmployee.last_name}'s role successfully updated!\n`);
+                        console.log(`\n${chosenEmployee.first_name} ${chosenEmployee.last_name}'s role successfully updated!\n`.brightGreen.italic);
+                        console.log(`---------------------------------------------------------------------\n`.brightGreen.bold);
                         init();
                     });
                 });
@@ -453,7 +460,8 @@ const updateMgr = () => {
                 (err,res) => {
                 if (err) throw err;
                 // Display console message of updated employee's manager
-                console.log(`\n${chosenEmployee.first_name} ${chosenEmployee.last_name}'s manager successfully updated to ${chosenManager.first_name} ${chosenManager.last_name}!\n`);
+                console.log(`\n${chosenEmployee.first_name} ${chosenEmployee.last_name}'s manager successfully updated to ${chosenManager.first_name} ${chosenManager.last_name}!\n`.brightGreen.italic);
+                console.log(`---------------------------------------------------------------------\n`.brightGreen.bold);
                 init();
             });
         });
@@ -470,8 +478,9 @@ const allRoles = () => {
         (err,roles) => {
         if (err) throw err;
         // Display all roles as table in console
-        console.log("\nAll of the company roles are as follows:\n");
+        console.log("\nAll of the company roles are as follows:\n".brightGreen.italic);
         console.table(roles);
+        console.log(`---------------------------------------------------------------------\n`.brightGreen.bold);
         init();
     });
 };
@@ -486,8 +495,9 @@ const allDept = () => {
         (err,departments) => {
         if (err) throw err;
         // Display all departments as table in console
-        console.log("\nAll of the company departments are as follows:\n");
+        console.log("\nAll of the company departments are as follows:\n".brightGreen.italic);
         console.table(departments);
+        console.log(`---------------------------------------------------------------------\n`.brightGreen.bold);
         init();
     });
 };
@@ -512,7 +522,8 @@ const addDept = () => {
             (err,departments) => {
             if (err) throw err;
             // Display console message of added department
-            console.log(`\n${answer.name} successfully added to departments!\n`);
+            console.log(`\n${answer.name} successfully added to departments!\n`.brightGreen.italic);
+            console.log(`---------------------------------------------------------------------\n`.brightGreen.bold);
             init();
         });
     });
@@ -578,7 +589,8 @@ const addRole = () => {
                 (err,res) => {
                 if (err) throw err;
                 // Display console message of added role
-                console.log(`\n${answer.title} successfully added as a role!\n`);
+                console.log(`\n${answer.title} successfully added as a role!\n`.brightGreen.italic);
+                console.log(`---------------------------------------------------------------------\n`.brightGreen.bold);
                 init();
             });
         });
@@ -627,7 +639,8 @@ const remDept = () => {
                 (err,res) => {
                 if (err) throw err;
                 // Display console message of removed department
-                console.log(`\nSuccessfully removed ${chosenDepartment.name} as a department!\n`);
+                console.log(`\nSuccessfully removed ${chosenDepartment.name} as a department!\n`.brightGreen.italic);
+                console.log(`---------------------------------------------------------------------\n`.brightGreen.bold);
                 init();
             });
         });
@@ -676,7 +689,8 @@ const remRole = () => {
                 (err,res) => {
                 if (err) throw err;
                 // Display console message of removed role
-                console.log(`\nSuccessfully removed ${chosenRole.title} as a role!\n`);
+                console.log(`\nSuccessfully removed ${chosenRole.title} as a role!\n`.brightGreen.italic);
+                console.log(`---------------------------------------------------------------------\n`.brightGreen.bold);
                 init();
             });
         });
@@ -735,8 +749,9 @@ const deptBudget = () => {
                 (err,res) => {
                 if (err) throw err;
                 // Display department utilized budget as table in console
-                console.log(`\nThe utilized budget in the ${chosenDept.name} department is as follows:\n`);
+                console.log(`\nThe utilized budget in the ${chosenDept.name} department is as follows:\n`.brightGreen.italic);
                 console.table(res);
+                console.log(`---------------------------------------------------------------------\n`.brightGreen.bold);
                 init();
             });
         });
@@ -799,7 +814,7 @@ const viewOptions = () => {
             "View Total Utilized Budget By Department",
             "Return to start"
           ],
-          message: "What would you like to do?",
+          message: "What would you like to see?",
           name: "view"
         }
     ]).then((answer) => {
@@ -847,7 +862,7 @@ const addOptions = () => {
             "Add Role",
             "Return to start"
           ],
-          message: "What would you like to do?",
+          message: "What would you like to add?",
           name: "add"
         }
     ]).then((answer) => {
@@ -885,7 +900,7 @@ const updateOptions = () => {
             "Update Employee Manager",
             "Return to start"
           ],
-          message: "What would you like to do?",
+          message: "What would you like to update?",
           name: "update"
         }
     ]).then((answer) => {
@@ -922,7 +937,7 @@ const removeOptions = () => {
             "Remove Role",
             "Return to start"
           ],
-          message: "What would you like to do?",
+          message: "What would you like to remove?",
           name: "remove"
         }
     ]).then((answer) => {
@@ -952,8 +967,8 @@ const removeOptions = () => {
 connection.connect((err) => {
     if (err) throw err;
     console.log(`connected as id ${connection.threadId}`);
-    console.log(`\n---------------------------------------------------------------------\n`);
-    console.log(`Welcome to the Employer Tracker application!\n`);
-    console.log(`---------------------------------------------------------------------\n`);
+    console.log(`\n---------------------------------------------------------------------\n`.yellow.bold);
+    console.log(`\t WELCOME TO THE EMPLOYEE MANAGEMENT SYSTEM APPLICATION! \n`.brightBlue.bgYellow.bold);
+    console.log(`---------------------------------------------------------------------\n`.yellow.bold);
     setTimeout(init, 1000);
 });

@@ -118,6 +118,7 @@ No current tests for this application.
 - [X] [mysql](https://www.npmjs.com/package/mysql)
 - [X] [Inquirer](https://www.npmjs.com/package/inquirer)
 - [X] [console.table](https://www.npmjs.com/package/console.table)
+- [X] [npm colors](https://www.npmjs.com/package/colors)
 
 ## LINKS
 

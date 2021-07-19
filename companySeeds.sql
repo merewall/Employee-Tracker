@@ -1,5 +1,6 @@
 USE companyDB;
 
+/* Seeding departments into the departments table */
 INSERT INTO departments (name)
 VALUES 
     ("Ministry of Magic"),
@@ -10,6 +11,7 @@ VALUES
     ("Transportation"),
     ("Games and Sports");
 
+/* Seeding roles into the role table */
 INSERT INTO role (title, salary, department_id)
 VALUES 
     ("Minister of Magic", 300000, 1),
@@ -28,6 +30,7 @@ VALUES
     ("Quidditch Referee", 35000, 7),
     ("League Manager", 80000, 7);
 
+/* Seeding employees into the employee table */
 INSERT INTO employee (first_name, last_name, role_id)
 VALUES ('Hermione', 'Granger', 1);
 

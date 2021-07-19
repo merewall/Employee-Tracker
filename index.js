@@ -183,7 +183,7 @@ const empByMgr = () => {
                 console.log(`\nEmployees managed by ${answer.chosenMgr} are as follows:\n`);
                 console.table(res);
                 init();
-                };
+                }
             );
         });
     });  
@@ -757,7 +757,7 @@ const init = () => {
             "REMOVE",
             "Exit"
           ],
-          message: "What would you like to do?",
+          message: "What would you like to do in the company database?",
           name: "start"
         }
     ]).then((answer) => {

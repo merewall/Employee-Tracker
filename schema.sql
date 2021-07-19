@@ -1,14 +1,17 @@
+/* Drop/create database */
 DROP DATABASE IF EXISTS companyDB;
 CREATE database companyDB;
 
 USE companyDB;
 
+/* Creating table of departments */
 CREATE TABLE departments (
   id INT UNSIGNED AUTO_INCREMENT,
   name VARCHAR(30) UNIQUE NOT NULL,
   PRIMARY KEY (id)
 );
 
+/* Creating table of roles */
 CREATE TABLE role (
   id INT UNSIGNED AUTO_INCREMENT,
   title VARCHAR(30) UNIQUE NOT NULL,
@@ -22,6 +25,7 @@ CREATE TABLE role (
     ON DELETE CASCADE
 );
 
+/* Creating table of employees */
 CREATE TABLE employee (
   id INT UNSIGNED AUTO_INCREMENT,
   first_name VARCHAR(30) NOT NULL,

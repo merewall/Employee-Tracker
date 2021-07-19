@@ -952,5 +952,8 @@ const removeOptions = () => {
 connection.connect((err) => {
     if (err) throw err;
     console.log(`connected as id ${connection.threadId}`);
-    init();
+    console.log(`\n---------------------------------------------------------------------\n`);
+    console.log(`Welcome to the Employer Tracker application!\n`);
+    console.log(`---------------------------------------------------------------------\n`);
+    setTimeout(init, 1000);
 });

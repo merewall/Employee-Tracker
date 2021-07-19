@@ -792,6 +792,7 @@ const init = () => {
             return removeOptions();
             }
             default: {
+            console.log('Mischief Managed!'.brightGreen.italic)
             return process.exit();
             }
         };

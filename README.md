@@ -74,6 +74,7 @@ _Example of all the view options for the database._
 ![View options for viewing info in database](https://github.com/merewall/Employee-Tracker/blob/main/assets/view-options.PNG)
 
 _Example of all add options for the database._
+
 ![Add options for adding info in database](https://github.com/merewall/Employee-Tracker/blob/main/assets/add-options.PNG)
 
 _Example of all update options for the database._  

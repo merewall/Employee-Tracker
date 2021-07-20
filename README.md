@@ -98,6 +98,10 @@ _View of success message after removing employee._
 ![Removed employee success message](https://github.com/merewall/Employee-Tracker/blob/main/assets/rem-emp-success.PNG)
 ![Table of employees no longer showing removed employee](https://github.com/merewall/Employee-Tracker/blob/main/assets/removed-emp.PNG)
 
+_View of goodbye message when user exits application._
+
+![Exit of application](https://github.com/merewall/Employee-Tracker/blob/main/assets/goodbye-message.PNG)
+
 _Gif of Employee Tracker application in use._  
 ![Employee Tracker demo gif](https://github.com/merewall/Employee-Tracker/blob/main/assets/employee-tracker-demo.gif)
 
